@@ -1,0 +1,564 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ////////////////////////////////////////   Nav bar start   //////////////////////////////////////////////////////////////////////// */
+
+nav {
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-image: linear-gradient(to bottom, rgb(3, 70, 87), rgb(4, 39, 68));
+  position: sticky;
+  top: -20px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  position: relative;
+  color: #fff;
+}
+
+nav ul li a {
+  color: #fff;
+  margin: -5px;
+  margin: 5px 20px;
+  text-decoration: none;
+}
+
+a.nav-link {
+  color: #fff;
+}
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(239, 77, 7);
+  height: 3px;
+
+  width: 0px;
+  left: 0;
+  bottom: 0px;
+  transition: 0.5s;
+}
+nav ul li a:hover::before {
+  width: 100%;
+}
+
+.logo {
+  margin-left: 50px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 40px;
+}
+
+nav ul li a.active::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(239, 77, 7);
+  height: 3px;
+  width: 75px;
+  left: 10px;
+  bottom: 0px;
+
+  transition: 1s;
+}
+
+nav ul li a.active:hover::before {
+  width: 80%;
+}
+/* ////////////////////////////////////////   Nav bar end   //////////////////////////////////////////////////////////////////////// */
+
+/* ////////////////////////////////////////   Home page slide start  //////////////////////////////////////////////////////////////////////// */
+.slideshow-container {
+  position: relative;
+}
+
+.text {
+  color: rgb(255, 255, 255);
+  font-family: "Times New Roman", Times, serif;
+  position: absolute;
+  bottom: 280px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.text:hover {
+  animation: shaking 3.9s;
+  animation-iteration-count: inherit;
+}
+
+@keyframes shaking {
+  100% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+
+  0% {
+    transform: translateY(0);
+  }
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.9;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px;
+  }
+}
+
+.text h5 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 900;
+}
+.text h1 {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 900;
+}
+
+/* ////////////////////////////////////////   Home page slide end  ///////////////////////////////////////////////////////// */
+
+/* ////////////////////////////////////////   Home page bottom logo  /////////////////////////////////////////////////////// */
+.bottom-logo {
+  position: absolute;
+  margin-top: -113px;
+  z-index: 1;
+  background: linear-gradient(to top, rgb(4, 4, 44), transparent);
+  width: 100%;
+  overflow: hidden;
+}
+
+.bottom-logo ul li {
+  display: inline-block;
+  overflow: hidden;
+  padding: 10px 85px;
+}
+
+.bottom-logo ul {
+  list-style-type: none;
+  background: transparent;
+}
+
+.bottom-logo ul li img:hover {
+  animation: shake 0.8s;
+  animation-iteration-count: 1;
+}
+
+@keyframes shake {
+  100% {
+    transform: translateY(-2px);
+  }
+
+  80% {
+    transform: translateY(4px);
+  }
+
+  60% {
+    transform: translateY(-4px);
+  }
+
+  40% {
+    transform: translateY(7px);
+  }
+
+  20% {
+    transform: translateY(-7px);
+  }
+}
+/* ////////////////////////////////////////   Home page bottom logo end  /////////////////////////////////////////////////////// */
+/* .know-button {
+  border-radius: 50px;
+  margin-top: 10px;
+  color: #fff;
+  overflow: hidden;
+  padding: 10px 32px;
+  position: relative;
+  text-decoration: none;
+  background: linear-gradient(to right, rgb(52, 52, 246), rgb(146, 146, 215));
+  transition: 0.2s transform ease-in-out;
+  will-change: transform;
+  z-index: 0;
+} */
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.know-button {
+  border-radius: 50px;
+  margin-top: 10px;
+  color: #fff;
+  overflow: hidden;
+  padding: 10px 40px;
+  position: relative;
+  text-decoration: none;
+  background: linear-gradient(to right, rgb(52, 52, 246), rgb(146, 146, 215));
+  transition: 0.2s transform ease-in-out;
+  will-change: transform;
+  z-index: 0;
+}
+
+.know-button::after {
+  background-color: rgb(248, 64, 13);
+  border-radius: 3rem;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(-0deg);
+  transform-origin: top left;
+  transition: 0.7s transform ease-out;
+  will-change: transform;
+  z-index: -1;
+}
+
+.know-button:hover::after {
+  transform: translate(0, 0);
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////// */
+.card-title {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.card-text {
+  font-size: 14px;
+}
+
+.card {
+  padding: 30px 5px;
+  border-radius: 150px;
+  margin: 15px;
+  box-shadow: 5px 10px #dcdada;
+}
+
+@keyframes shake-card {
+  100% {
+    transform: translateY(-10px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  0% {
+    transform: translateY(0px);
+  }
+}
+
+.card:hover {
+  animation: shake-card 0.7s;
+
+  animation-iteration-count: unset;
+}
+
+.third {
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.small-icon:hover {
+  animation: shake-small-icon 0.7s;
+
+  animation-iteration-count: unset;
+}
+
+@keyframes shake-small-icon {
+  100% {
+    transform: translateY(-10px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  0% {
+    transform: translateY(0px);
+  }
+}
+
+/* //djbfjhfjdhdfhf */
+.sliderContainer {
+  overflow: hidden;
+}
+
+.logoSlider > img {
+  width: 300px;
+  height: 300px;
+}
+
+.logoSlider {
+  display: flex;
+  animation: slideshow 5s infinite linear;
+}
+
+@keyframes slideshow {
+  50% {
+    transform: translate(200px);
+  }
+
+  0% {
+    transform: translate(0px);
+  }
+
+  80% {
+    transform: translate(-200px);
+  }
+
+  100% {
+    transform: translate(0px);
+  }
+}
+
+.view-button {
+  border-radius: 50px;
+  margin-top: 10px;
+  color: #fff;
+  overflow: hidden;
+  padding: 10px 40px;
+  position: relative;
+  text-decoration: none;
+  background: linear-gradient(to right, rgb(52, 52, 246), rgb(146, 146, 215));
+  transition: 0.2s transform ease-in-out;
+  will-change: transform;
+  z-index: 0;
+}
+
+.view-button::after {
+  background-color: rgb(248, 64, 13);
+  border-radius: 3rem;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(-0deg);
+  transform-origin: top left;
+  transition: 0.7s transform ease-out;
+  will-change: transform;
+  z-index: -1;
+}
+
+.view-button:hover::after {
+  transform: translate(0, 0);
+}
+
+.big-img {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.small-img {
+  position: absolute;
+  top: 100px;
+  left: 70px;
+}
+
+.img-slide {
+  overflow: hidden;
+}
+
+.img-Slider > img {
+  width: 300px;
+  height: 300px;
+}
+
+.img-Slider {
+  display: flex;
+  animation: imgshow 5s infinite linear;
+}
+
+@keyframes imgshow {
+  50% {
+    transform: translate(-410px);
+  }
+
+  0% {
+    transform: translate(0px);
+  }
+
+  10% {
+    transform: translate(-80px);
+  }
+
+  20% {
+    transform: translate(-160px);
+  }
+
+  30% {
+    transform: translate(-240px);
+  }
+
+  40% {
+    transform: translate(-320px);
+  }
+
+  100% {
+    transform: translate(-400px);
+  }
+}
+
+.bottom-slide-container {
+  position: relative;
+}
+
+.bottom-text {
+  color: white;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 80px;
+  width: 100%;
+  text-align: center;
+}
+
+.bottom-text:hover {
+  animation: moving 1.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moving {
+  50% {
+    transform: translateY(3px);
+  }
+  0% {
+    transform: translateY(0);
+  }
+}
+
+.change {
+  animation-name: change;
+  animation-duration: 5s;
+}
+
+@keyframes change {
+  from {
+    opacity: 0.6;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.empty-logo ul li {
+  display: inline-block;
+  margin: 40px 30px;
+}
+
+.empty-logo ul {
+  list-style-type: none;
+}
+
+.ninth {
+  background: linear-gradient(to bottom, rgb(3, 70, 87), rgb(4, 39, 68));
+}
+
+.reveal {
+  transform: translateY(-73px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.total-rounds {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.circle {
+  padding: 30px 24px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgb(213, 213, 215);
+}
+
+.round-icon:hover {
+  animation: shake-icon-rotate 0.7s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake-icon-rotate {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  20% {
+    transform: translate(2px, 1px);
+  }
+  100% {
+    transform: translate(-2px, 4px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(-2px, -4px);
+  }
+}
+
+/* .small-round {
+  width: 25px;
+  height: 25px;
+  top: 0;
+  left: 0;
+  margin: -30px 10px 10px 30px;
+  background: linear-gradient(to bottom, rgb(129, 129, 245), rgb(48, 48, 194));
+  color: #fff;
+  border-radius: 100px;
+  box-shadow: 0px 0px 10px rgb(213, 213, 215);
+}
+
+.small-round:hover {
+  animation: shake-small-icon 0.7s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake-small-icon {
+  100% {
+    transform: translateY(-6px);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+  0% {
+    transform: translateY(0px);
+  }
+} */
